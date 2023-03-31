@@ -1,0 +1,36 @@
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{\numberline {1}Úvod}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Popis projektu}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Technologie}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Unity}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Způsob užití v projektu}{4}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Alternativní herní enginy}{5}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}JetBrains Rider}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Způsob užití v projektu}{6}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Blender}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Způsob užití v projektu}{6}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Realizace}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Struktura projektu}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Menu}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Nastavení}{8}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Rozdělení na hratelné sekce}{9}{subsection.4.1.3}%
+\contentsline {subsubsection}{Sekce náhodně generovaného scénáře}{9}{subsection.4.1.3}%
+\contentsline {subsubsection}{Sekce výuky hráče}{10}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Integrované kybernetické hrozby}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Malware}{10}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Ransomware}{11}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Phishing}{12}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Řešení generovaného scénáře}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Procedurální generace mapy}{12}{subsection.4.3.1}%
+\contentsline {subsubsection}{Prvotní pokus s generací za pomocí šachovnicového paternu}{12}{subsection.4.3.1}%
+\contentsline {subsubsection}{Procedurální generace s náhodnými parametry}{12}{figure.caption.6}%
+\contentsline {subsubsection}{Finální provedení}{14}{figure.caption.6}%
+\contentsline {subsection}{\numberline {4.3.2}Procedurální generace počítačového rozhraní}{14}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Příkazový řádek a jeho modulární implementace}{15}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Ovládání virtuálního počítače}{16}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Řešení výukového scénáře}{16}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Postupy optimalizace}{17}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}URP}{17}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Optimalizace skriptů}{17}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Occlusion culling}{17}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Závěr}{20}{chapter.5}%

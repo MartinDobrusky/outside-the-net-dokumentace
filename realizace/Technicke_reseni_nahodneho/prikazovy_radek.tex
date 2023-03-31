@@ -1,0 +1,11 @@
+\subsection{Příkazový řádek a jeho modulární implementace}
+
+V každé vytvořené počítačové stanici je na spodní hlavní liště umístěn příkazový řádek. V~této kapitole je popsáno jeho technické řešení a modulární implementace. Více informací o jeho využití je popsáno v kapitole \ref{sec:o_prikazovem_radku} níže.
+
+Vytvořený simulovaný příkazový řádek pro hru obsahuje dva skripty, které slouží k~ovládání zobrazování komponent a zpracování příkazů.
+
+První skript řídí zobrazování komponent, které jsou přítomny na canvasu, jako jsou například pole pro zadávání příkazů a výstup. Tento skript reaguje na uživatelské vstupy a přizpůsobuje zobrazované komponenty podle aktuálního stavu příkazového řádku.
+
+Druhý skript, který je modulární, zpracovává příkazy a definuje výstup podle specifikací pro každý počítač v hře. Tento skript získává parsované příkazy, které jsou zadány hráčem na příkazovém řádku a na základě těchto příkazů definuje výstup, který je následně hráči zobrazen.
+
+Důležitou vlastností druhého skriptu je jeho modulárnost, která umožňuje snadné přidávání nových příkazů a rozšíření funkcionality příkazového řádku. Tento skript může být upraven podle potřeb herního prostředí a umožňuje přidat nové příkazy a definovat výstupy pro každý z nich na základě unikátních parametrů každé počítačové stanice.

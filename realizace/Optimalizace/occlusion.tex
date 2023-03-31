@@ -1,0 +1,12 @@
+\subsection{Occlusion culling}
+Princip optimalizace za pomocí Occlusion culling v Unity spočívá v minimalizaci počtu objektů, které jsou renderovány v každém snímku, aby se zvýšila výkonnost a snížily nároky na grafickou kartu.
+
+Occlusion culling využívá informace o viditelnosti, aby určil, které objekty jsou skryty za jinými objekty, a proto nejsou viditelné z pozice kamery. Pokud jsou tyto objekty skryty, nemusí být renderovány, což snižuje počet operací renderování v každém snímku.
+
+Occlusion culling funguje tak, že se vytvoří prostorový graf scény, který reprezentuje vztahy mezi objekty a pozicí kamery. Poté se provede test viditelnosti, který pro každou kameru určí, které objekty jsou viditelné a které jsou skryté. Tyto informace se pak použijí ke generování listu viditelných objektů pro každou kameru.
+
+V Unity se Occlusion culling provádí pomocí technologie Umbra, která umožňuje vytváření prostorových grafů scény a testování viditelnosti. Pro optimalizaci je důležité správně nastavit parametry Umbra, jako jsou velikost buněk, kvalita stínů a počet hierarchických úrovní.
+
+V projektu byla nejprve vytvořena mapa a její prvky přetypovány na statické. Následně byla za pomocí skriptu spuštěna metoda StaticOclussionCulling.GenerateInBackground(), která vytvořila prostorový graf scény a provedla test viditelnosti. Výsledkem byl seznam viditelných objektů pro hlavní kameru, který byl uložen do souboru. Tento soubor byl následně načten do projektu a použit pro optimalizaci Occlusion cullingu.
+
+

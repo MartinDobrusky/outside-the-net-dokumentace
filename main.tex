@@ -1,0 +1,284 @@
+\documentclass[12pt, a4paper,
+ oneside,   
+ %%twoside,        
+ openright
+]{report}
+
+%% Nutné balíčky a nastavení
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Proměnné
+\newcommand\city{Pardubice} %% vyplň oficiální název města
+\newcommand\district{Pardubický kraj} %% vyplň oficiální název kraje
+\newcommand\specialization{Obor č. 18: Informatika} %% -- napiš číslo a název tvého oboru
+\newcommand\school{DELTA - Střední škola informatiky a ekonomie, s.r.o.} %% vyplň název školy
+\newcommand\consultant{Mgr. Josef Horálek, Ph.D.} %% vyplň jméno svého konzultanta
+\newcommand\authorName{Martin Dobruský}  %% vyplň své jméno
+\newcommand\publicationYear{2023} %% vyplň rok
+\newcommand\mainTitle{Outside The Net} %% vyplň název své práce
+
+\title{\mainTitle} %% -- Název tvé práce
+\author{\authorName} %% -- tvé jméno
+\date{\publicationYear} %% -- rok, kdy píšeš SOČku
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=1.5cm]{geometry} %% nastaví okraje, left -- vnitřní okraj, right -- vnější okraj
+
+\usepackage[czech]{babel} %% balík babel pro sazbu v češtině
+\usepackage[utf8]{inputenc} %% balíky pro kódování textu
+\usepackage[T1]{fontenc}
+\usepackage{cmap} %% balíček zajišťující, že vytvořené PDF bude prohledávatelné a kopírovatelné
+
+\usepackage{graphicx} %% balík pro vkládání obrázků
+
+\usepackage{subcaption} %% balíček pro vkládání podobrázků
+
+\usepackage{hyperref} %% balíček, který v PDF vytváří odkazy
+
+\linespread{1.15} %% řádkování
+
+\usepackage[pagestyles]{titlesec} %% balíček pro úpravu stylu kapitol a sekcí
+\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}]
+\titleformat{\section}[block]{\scshape\bfseries\Large}{\thesection}{10pt}{\vspace{0pt}}
+\titleformat{\subsection}[block]{\bfseries\large}{\thesubsection}{10pt}{\vspace{0pt}}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+% mění styl odstavců (odstavec je odsazený o 0.5ex a mezi odstavci je 2ex)
+% \setlength{\parindent}{0.5ex}
+% \setlength{\parskip}{2ex}
+
+\usepackage{booktabs}
+
+\usepackage{url}
+
+%% Balíčky co se můžou hodit :) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{pdfpages} %% Balíček umožňující vkládat stránky z PDF souborů, 
+
+\usepackage{upgreek} %% Balíček pro sazbu stojatých řeckých písmen, třeba u jednotky mikrometr. Například stojaté mí: \upmu, stojaté pí: \uppi
+
+\usepackage{amsmath}    %% Balíčky amsmath a amsfonts 
+\usepackage{amsfonts}   %% pro sazbu matematických symbolů
+\usepackage{esint}     %% pro sazbu různých integrálů (např \oiint)
+\usepackage{mathrsfs}
+
+%% makra pro sazbu matematiky
+\newcommand{\dif}{\mathrm{d}} %% makro pro sazbu diferenciálu, místo toho
+%% abych musel psát '\mathrm{d}' mi stačí napsat '\dif' což je mnohem 
+%% kratší a mohu si tak usnadnit práci
+
+\begin{document}
+\pagestyle{empty}
+\begin{titlepage}
+    \bfseries{ %%% písmo na stránce je tučně
+        \begin{center}
+            \LARGE{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}
+
+            \vspace{14pt}
+            \large{ %%%%
+                \specialization
+            } %%%%
+
+            \vspace{0.4 \textheight}
+
+            \LARGE{ %%%%
+                \mainTitle
+            }%%%%
+
+            \vspace{0.4\textheight}
+        \end{center}
+        
+        \noindent\Large{\authorName} 
+
+        \noindent\Large{\district \hspace{\stretch{1}}  \city, \publicationYear} 
+        
+            
+    } %%%
+\end{titlepage}
+
+\cleardoublepage
+
+%% Úvodní stránka s informacemi
+{\bfseries %%% písmo na stránce je tučně
+    \begin{center}
+        \LARGE{STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}
+
+        \vspace{14pt}
+        {\large %%%%
+            \specialization %% -- napiš číslo a název tvého oboru
+        } %%%%
+
+        \vspace{0.3 \textheight}
+
+        \LARGE{ %%%%
+        \mainTitle
+        }
+
+        \LARGE{ %%%%
+        Outside The Net
+        }%%%%
+
+        \vspace{0.24\textheight}
+    \end{center}  
+}%%%
+{\Large %%%
+    \noindent\textbf{Jméno:} \authorName\\
+    \textbf{Škola:} \school\\
+    \textbf{Kraj:} \district\\
+    \textbf{Konzultant:} \consultant\\
+} %%%
+
+\noindent \city, \publicationYear
+
+\cleardoublepage
+
+\noindent{\Large{\bfseries{Prohlášení}}}  %% uprav si koncovky podle toho na jaký rod se cítíš, vypadá to pak lépe :) 
+
+\noindent Prohlašuji, že jsem svou práci SOČ vypracoval/a samostatně a použil/a jsem pouze prameny a literaturu uvedené v seznamu bibliografických záznamů.
+
+\noindent Prohlašuji, že tištěná verze a elektronická verze soutěžní práce SOČ jsou shodné. 
+
+\noindent Nemám závažný důvod proti zpřístupňování této práce v souladu se zákonem č. 121/2000 Sb., o právu autorském, o právech souvisejících s právem autorským a o změně některých zákonů (autorský zákon) ve znění pozdějších předpisů. 
+
+\vspace{24 pt}
+
+\noindent V Pardubicích dne 26. března 2023 \dotfill{}\hspace{\stretch{0.5}} 
+
+\hspace{8cm} \authorName
+
+\cleardoublepage
+
+\vspace*{0.8\textheight}
+\noindent{\Large{\bfseries{Poděkování}}}
+
+\noindent
+Rád bych poděkoval vedoucímu mé práce Mgr. Josefu Horálkovi za cenné rady, věcné připomínky a vstřícnost při konzultacích tvorby tohoto projektu. Dále bych chtěl poděkovat mé rodině a přátelům za jejich podporu v průběhu vývoje.
+
+\cleardoublepage
+
+\noindent{\Large{\bfseries{Abstrakt}}}
+
+\noindent Práce dokumentuje postup vývoje 3D videohry s pracovním názvem Outside The Net. Jedná se o hru přibližující aktuální problematiku kybernetické bezpečnosti. Byla vytvořena v herním enginu Unity za pomocí programovacího jazyku C\#. Cílem projektu/hry je seznámit hráče zábavnou formou s nejčastějšími kybernetickými hrozbami. Modulární architektura umožňuje snadné budoucí rozšíření. Hra je taktéž multiplatformní.
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Klíčová slova}}}
+
+\noindent Programování; Kybernetická bezpečnost; Unity; C\#; Procedurální generace; 3D grafika 
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Abstract}}}
+
+\noindent The thesis documents the development process of a 3D video game with the working title Outside The Net. It is a game presenting current issues of cyber security. It was developed in the Unity game engine using the C\# programming language. The aim of the project/game is to introduce players to the most common cyber threats in an entertaining way. Modular architecture allows for easy future expansion. The game is also multiplatform.
+
+\vspace{18pt}
+
+\noindent{\Large{\bfseries{Keywords}}}
+
+\noindent Programming; Cyber security; Unity; C\#; Procedural generation; 3D graphics
+
+\cleardoublepage
+
+\tableofcontents
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+\chapter{Úvod}
+\input{Uvod/Uvod.tex}
+\input{Uvod/Popis_projektu.tex}
+
+\chapter{Technologie}
+\input{Technologie/unity.tex}
+\\\\
+\input{Technologie/rider.tex}
+\input{Technologie/blender.tex}
+
+\chapter{Realizace}
+\section{Struktura projektu}
+
+\begin{figure}[ht]
+    \includegraphics[width=\columnwidth]{struktura_projektu.png}
+    \centering
+    \caption{Struktura návaznosti scén projektu}
+    \label{fig:struktura_svg}
+\end{figure}
+\input{Realizace/Struktura_projektu/menu.tex}
+\begin{figure}[ht]
+    \includegraphics[width=\columnwidth]{menu.png}
+    \centering
+    \caption{Ukázka grafického vzhledu úvodní obrazovky hry}
+    \label{fig:menu_img}
+\end{figure}
+\input{Realizace/Struktura_projektu/nastaveni.tex}
+\begin{figure}[ht]
+    \includegraphics[width=\columnwidth]{nastaveni.png}
+    \centering
+    \caption{Obrazovka herních nastavení}
+    \label{fig:nastaveni_img}
+\end{figure}
+\input{Realizace/Struktura_projektu/rozdeleni_sekci.tex}
+\input{Realizace/Struktura_projektu/nahodny_scenar.tex}
+\input{Realizace/Struktura_projektu/vyuka_scenar.tex}
+\begin{figure}[ht]
+    \includegraphics[width=\columnwidth]{uceni0.png}
+    \centering
+    \caption{Ukázka grafického vzhledu obrazovky s výukovým scénářem}
+    \label{fig:uceni0_img}
+\end{figure}
+
+
+\section{Integrované kybernetické hrozby}
+Do hry je integrováno několik kybernetických hrozeb. Při výběru byly zohledněny nejaktuálnější hrozby dle několika ověřených zdrojů. Jedním z nich je průzkum společnosti ENISA pro rok 2022. \cite{enisa}
+\input{Realizace/Integrovane_hrozby/malware.tex}
+\input{Realizace/Integrovane_hrozby/ransomware.tex}
+\input{Realizace/Integrovane_hrozby/phishing.tex}
+
+\section[Řešení generovaného scénáře]{Technické řešení generovaného scénáře}
+\input{Realizace/Technicke_reseni_nahodneho/generace_mapy.tex}
+\input{Realizace/Technicke_reseni_nahodneho/generace_rozhrani.tex}
+\input{Realizace/Technicke_reseni_nahodneho/prikazovy_radek.tex}
+
+\section{Ovládání virtuálního počítače}
+\input{Realizace/Technicke_reseni_nahodneho/o_prikazovem_radku.tex}
+
+\section[Řešení výukového scénáře]{Technické řešení výuky hráče}
+\input{Realizace/technicke_reseni_vyuky.tex}
+
+\section{Postupy optimalizace}
+\input{Realizace/Optimalizace/urp.tex}
+\input{Realizace/Optimalizace/scripty.tex}
+\input{Realizace/Optimalizace/occlusion.tex}
+\newpage
+
+\chapter{Závěr}
+\input{Zaver/zaver.tex}
+
+\input{Zaver/odkazy.tex}
+
+\listoffigures
+
+\vspace{0.5cm}
+\textit{Veškeré užité obrázky jsou dílem autora práce.} \vspace{0.5cm}
+
+\textit{Veškeré diagramy vložené fomrmou obrázku jsou dílem autora práce. Vytvořeny byly za pomocí bezplatného, volně dostupného open source softwaru Diagrams.net. Dostupné z: \url{https://app.diagrams.net}} \hangindent=0.7cm
+% \listoftables
+
+% \appendix
+
+% \titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}] %% nastavení nadpisu u příloh
+
+% \chapter*{Příloha}
+
+% \input{uvod/zadani_projektu.tex}
+
+\end{document}

@@ -1,0 +1,6 @@
+\subsection{Optimalizace skriptů}
+Využití správných metod a privátních proměnných jsou důležité faktory pro optimalizaci výkonu skriptů v Unity. Když je použita funkce FixedUpdate namísto funkce Update pro aktualizaci fizikálního pohybu herních objektů, získává se stabilnější pohyb bez fluktuací.
+
+Dále by měly být používány privátní proměnné místo veřejných proměnných, protože přístup k veřejným proměnným způsobuje značné zpomalení. Použití objektů jako parametrů funkcí také způsobuje zpomalení, proto by měly být použity proměnné. Navíc by mělo být minimalizováno použití funkcí Find() a GetComponent() v kódu, protože jsou to náročné operace. Místo toho by měl být uložen odkaz na herní objekt jako proměnná a mělo by být k němu přistupováno přímo. Dále by mělo být minimalizováno použití StartCoroutine() kvůli zpomalení a zvýšení náročnosti na paměť.
+
+Výše uvedené optimalizační metody byly použity v projektu a jsou jedním z hlavních faktorů vedoucích ke zvýšení výkonu a především plynulosti celé hry.

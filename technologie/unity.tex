@@ -1,0 +1,34 @@
+\section{Unity}
+\label{sec:unity}
+
+Unity je multiplatformní herní engine vyvinutý pro tvorbu videoher a dalších interaktivních aplikací využívajících 2D a 3D grafiku. Engine využívá komponentové architektury a podporuje psaní kódu v programovacím jazyce C\#. \cite{unity}
+
+Engine zjednodušuje proces vývoje her díky používání vizuálních editorů pro tvorbu scén a objektů, kterými lze jednoduše manipulovat pomocí drag-and-drop interakce. Dále obsahuje řadu výkonných nástrojů pro tvorbu fyzikálních simulací, animací, postprocesování obrazu a zvukových efektů. Taktéž obsahuje řadu nástrojů pro tvorbu uživatelského rozhraní a ovládání. Uživatelské rozhraní může také být tvořeno pomocí různorodých komponent, jakož jsou kupříkladu tlačítka, textová pole, posuvníky, checkboxy a další. \cite{unity}
+
+Unity podporuje mnoho platforem jako jsou PC, mobilní zařízení, herní konzole a~VR headsety. Podpora pro tyto platformy zahrnuje jak základní funkce, tak i specifické nástroje a pluginy pro optimalizaci a vývoj pro konkrétní platformy. Unity taktéž podporuje hry multiplayerové a to buď formou vlastních scriptů, nebo předem připravených pluginů. Další výhodou Unity je jeho rozsáhlá komunita, která nabízí mnoho nástrojů, pluginů a~tutoriálů, což umožňuje rychlejší vývoj a snížení nákladů na vývoj hry.
+
+\subsection{Způsob užití v projektu}
+
+Herní engine Unity posloužil pro kompletaci celého projektu.
+
+V první řadě obstaral prostředí pro tvorbu grafického rozhraní, tedy integraci 3D a 2D herních komponent. Zároveň také tvorbu uživatelského rozhraní a ovládání. Ovládání bylo zprostředkováno formou vstupních inputů. Uživatelské rozhraní bylo tvořeno v enginu za pomocí komponentu Canvas a to rastrovou i vektorovou grafikou. Pro texty byl využit aktualizovaný textový systém. Původní nejpoužívanější variantou byly základní textové komponenty, nyní došlo k přechodu na TMP (TextMeshPro) komponenty, které se mimo jiné starají o výpisy textových polí \cite{unity_tmp}.
+
+Další funkcí tohoto nástroje, která byla využita, je práce se světlem a zvuky. Unity v~základu nabízí velice jednoduchou práci s těmito prosředky. I v případě, že vývojář vyžaduje komplexnější zásahy do fungování těchto prostředků, je možné toto učinit v~nastavení jednolivých komponent nebo build nastavení hry.
+
+V neposlední řadě také enigne zajistil samotný export spustitelného programu pro různé operační systémy i s podporou nejnovějšího proprietárního herního middlewaru \cite{unity_api}.
+
+\subsection{Alternativní herní enginy}
+
+Alternativ k hernímu enginu Unity je více a každá přináší různé výhody a nevýhody. V~této práci budou představeny tři z nejznámějších alternativ k Unity.
+
+První alternativa je Unreal Engine, který je vytvořen společností Epic Games. Unreal Engine poskytuje široké spektrum funkcí pro tvorbu 3D her a virtuální reality. Jeho hlavní předností je vysoká kvalita grafiky a pokročilé možnosti simulace fyziky. Unreal Engine je také vhodný pro vytváření her s velkým rozsahem a detaily. Nevýhodou je vyšší náročnost na hardwarové a softwarové prostředky. \cite{unreal_engine}
+
+Unreal Engine nebyl zvolen z důvodů vyšší komplexnosti, než je k tvorbě projektu zapotřebí. Jak bylo zmíněno výše, Unreal Engine je vhodný pro vytváření her s velkým rozsahem a detaily. Vzhledem k tomu, že projekt je zaměřen na vytvoření jednoduché hry s nízko-polygonovou grafikou, byla zvolena alternativa Unity.
+
+Druhá alternativa je CryEngine, který je vytvořen společností Crytek. CryEngine je podobně jako Unreal Engine zaměřen na tvorbu 3D her s vysokou kvalitou grafiky a pokročilými funkcemi simulace fyziky. Hlavní výhodou CryEngine je jeho rychlost a efektivita, která umožňuje vývojářům snadno vytvářet velké a rozsáhlé světy. Nevýhodou CryEngine je vysoká cena a náročná úprava. \cite{cryengine}
+
+CryEngine nebyl taktéž zvolen z důvodů vyšší komplexnosti, než je k tvorbě projektu zapotřebí. Jak bylo zmíněno výše, tak i CryEngine je spíše vhodný pro vytváření her s~velkým rozsahem a detaily. 
+
+Třetí alternativa je Godot Engine, který je open-source herní engine vyvíjený komunitou. Godot Engine poskytuje snadné použití a rychlou návratnost při tvorbě 2D a 3D her. Hlavní výhodou Godot Engine je jeho flexibilita a možnost použití na různých platformách. Godot Engine je také zdarma a nevyžaduje žádné licenční poplatky. Nevýhodou je menší komunita a menší podpora než u Unity, Unreal Engine nebo CryEngine. \cite{godot}
+
+Herní engine Godot byl druhou nejvíce vhodnou variantou pro tvorbu projektu takovéhoto typu. Ve výsledku bylo zvoleno Unity z důvodu osobních preferencí a zkušeností.
